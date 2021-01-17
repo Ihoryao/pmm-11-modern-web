@@ -8,12 +8,37 @@
 
     <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
     <script src="chat.js"></script>
-    <title>MyChat</title>
+    <title>MyChaty</title>
 </head>
 
 <body>
-    <div>Chat</div>
-
+    <section class="msger">
+        <header class="msger-header" id='status-table-parent'>
+            <!-- <div class="msger-header-title">
+            <i class="fas fa-comment-alt"></i> CyberChat
+        </div> -->
+            <table id="status-table">
+                <tr>
+                    <th>User</th>
+                    <th>Status</th>
+                </tr>
+            </table>
+            <div class="logout">
+                <form class="logout-btn" method="get" action="/logout">
+                    <input class="btn-form" style="" type="submit" value='Log out' onclick='CloseSocker()' />
+                </form>
+            </div>
+            <!-- <div class="msger-header-options">
+            <span><i class="fas fa-cog"></i></span>
+        </div> -->
+        </header>
+        <main class="msger-chat" id="chat">
+        </main>
+        <form class="msger-inputarea" onsubmit="return false">
+            <input id="input" type="text" class="msger-input" placeholder="Enter your message...">
+            <input id="formSubmit" type="submit" class="msger-send-btn" value='Send' onclick='AddMessageClick()' />
+        </form>
+    </section>
 </body>
 
 </html>

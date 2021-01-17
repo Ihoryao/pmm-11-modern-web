@@ -72,7 +72,8 @@ passport.deserializeUser(function (id, done) {
 var auth = passport.authenticate(
     'local', {
     successRedirect: '/',
-    failureRedirect: '/login'
+    failureRedirect: '/login',
+    failureFlash: true
 });
 var myAuth = function (req, res, next) {
     if (req.isAuthenticated())
